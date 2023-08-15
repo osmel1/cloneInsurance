@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:  #35A29F ;
+}
+
+.thankYouContainer {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+}
+
+.thankYouMessage svg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.thankYouMessage h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #071952;
+}
+
+.thankYouMessage p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Add any additional styles you want to customize the page further */

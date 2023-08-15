@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,200&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><img src="src/logo.png" alt="compareTonAssurance"></div>
+        <div class="centerTxt">
+            <h2>
+                Quelque soient vos antécédents obtenez un devis d'assurance pour Taxi en quelques clics
+            </h2>
+        </div>
+        <div class="contact">
+            <div class="left-icon">
+                <img src="./src/phone_icon-icons.com_66151.svg" height="30px" width="30px" alt="">
+            </div>
+            <div class="right-des">
+                <p>Conseil personnalisé</p>
+                <p>
+                    01 09 02 02 03 00 09
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <div class="left">
+            <img src="src/assurance-taxi.jpg" alt="">
+        </div>
+        <div class="left-mobile">
+            <img src="src/assurance-taxi-1.jpg" alt="">
+        </div>
+        <div class="right">
+            <form  onsubmit="return validateForm(event)" action="includes/insertData.php"   method="post"id="myForm">
+                <h2>Complétez ce formulaire pour obtenir un tarif</h2>
+                <label for="raisonSociale">
+                    <input id="raisonSociale" name="raisonSociale" type="text" placeholder="RAISON SOCIALE">
+                </label>
+                <label for="marqueVehicule">
+                    <input id="marqueVehicule" name="marqueVehicule" type="text" placeholder="MARQUE DU VÉHICULE">
+                </label>
+                <label for="VEHICULEASSURE">
+                    <select id="VEHICULEASSURE" name="VEHICULEASSURE" aria-label="VÉHICULE ASSURÉ ACTUELLEMENT">
+                        <option value="" disabled selected>VÉHICULE ASSURÉ ACTUELLEMENT</option>
+                        <option value="OUI">OUI</option>
+                        <option value="NON">NON</option>
+                    </select>
+                </label>
+                <label for="assuranceRes">
+                    <select id="assuranceRes" name="assuranceRes" aria-label="VÉHICULE ASSURÉ ACTUELLEMENT">
+                        <option value="" disabled selected>ASSURANCE RÉSILIÉ</option>
+                        <option value="OUI">OUI</option>
+                        <option value="NON">NON</option>
+                    </select>
+                </label>
+                <div class="twoElmts">
+                    <label for="nom">
+                        <input id="nom" name="nom" type="text" placeholder="VOTRE NOM ">
+                         <div  class="error-container" id="nomIndicator"></div>
+                        
+                    </label>
+                    <label for="prenom">
+                        <input id="prenom" name="prenom" type="text" placeholder="VOTRE PRÉNOM ">
+                        <div  class="error-container" id="prenomIndicator"></div>
+                    </label>
+
+                </div>
+                <div class="twoElmts">
+                    <label for="numTel">
+                        <input id="numTel" name="numTel" type="text" placeholder="VOTRE TÉLEPHONE ">
+                        <div  class="error-container" id="numTelIndicator"></div>
+                    </label>
+                    <label for="email">
+                        <input id="email" name="email" type="text" placeholder="VOTRE E-MAIL ">
+                        <div        class="error-container" id="emailIndicator"></div>
+                    </label>
+                   
+                </div>
+                 <div id="lastInd" class="error-container">
+                        
+                        </div>
+                <label for="check">
+                    <input type="checkbox" name="check" id="check">
+                    J'accepte les conditions générales d’utilisation et la politique de confidentialité
+                </label>
+                <div class="divBtn">
+                    <button type="submit" name="submit" id="submit" class="btn">COMPARER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="txt">
+        <h1>Assurance Taxi</h1>
+        <p><strong>Préambule</strong>: L'activité de chauffeur taxi est réglementée en France selon le code des
+            transports,
+            plus précisément l'article L3120-4 qui stipule que toute personne réalisant des transports de personnes
+            rémunérés avec un
+            véhicule de moins de 10 places doit souscrire une assurance taxi. </p>
+        <p><strong>On dénombre 2 cas de figure pour l'assurance taxi:</strong></p>
+        <div class="prag">
+            <div class="title">
+                <img class="svgImg" src="src/check-circle-svgrepo-com.svg" alt="check" />
+                Assurance société taxi
+            </div>
+            <p>
+                Dans ce cas de figure il s’agit exclusivement d’une personne morale disposant de licences d’exercices
+                d’activité de taxi en embauchant des salariés ou en louant des licences à des professionnels. Donc c'est
+                l'entreprise de taxi qui va devoir assurer ses véhicules à titre professionnel en souscrivant des
+                assurances auto pour taxi.
+
+            </p>
+
+            <div class="title">
+                <img src="src/check-circle-svgrepo-com.svg" alt="check" />
+                Assurance taxi indépendant
+            </div>
+            <p>
+                Personne physique exerçant une activité libérale de chauffeur de taxi, puisqu’il dispose d’une licence à
+                son nom, dans ce cas de figure c’est le chauffeur indépendant qui a l’obligation de souscrire une
+                assurance auto professionnelle pour usage taxi.
+            </p>
+        </div>
+    </div>
+    <div class="txt">
+        <h1>Obligation d’assurances pour les Taxi</h1>
+        <p>Pour ce qui est de l’obligation d’assurance, au-delà de l’assurance automobile obligatoire pour tout véhicule
+            à moteur, on dénombre 2 garanties d’assurances obligatoires pour les taxis:</p>
+        <div class="insurance-info">
+            <h2>1. Assurance auto taxi</h2>
+            <p>Assurance auto professionnelle pour l’exercice d’activités de chauffeur taxi, le souscripteur est le
+                chauffeur de taxi ou la société de taxi. Elle couvre tout dommage matériel et corporel survenu lors de
+                l’exercice de l’activité.</p>
+        </div>
+
+        <div class="insurance-info">
+            <h2>2. Assurance RC PRO taxi</h2>
+            <p>Inclut de fait dans l’assurance du véhicule à usage professionnel pour l’activité de chauffeur taxi, elle
+                garantit tout dommage occasionné aux clients, prestataire et concurrents dans l’exercice de l’activité
+                de chauffeur taxi.</p>
+        </div>
+    </div>
+    <div class="txt">
+        <h1>Assurance auto pour taxi justificatifs</h1>
+        <p>
+            Les justificatifs délivrés par l’assurance après la souscription d’une assurance auto pour taxi sont identiques que ceux délivrés pour l’assurance automobile particulière sauf qu’il devra être indiqué sur l’attestation d’assurance la mention assurance auto pour usage taxi (transport de personnes à titre onéreux)
+        </p>
+    </div>
+    <div class="txt">
+        <h1>Exemples garanties et couverture pour les assurances taxi</h1>
+        <div class="title col-blue">Assurance auto taxi :</div>
+        <ul>
+            <li>
+                <img src="src/check-circle-svgrepo-com.svg" alt="">
+                <p>Bris de glace responsable ou non responsable.</p>
+            </li>
+            <li>
+                <img src="src/check-circle-svgrepo-com.svg" alt="">
+                <p>Vol et incendie responsable ou non responsable.</p>
+            </li>
+            <li>
+                <img src="src/check-circle-svgrepo-com.svg" alt="">
+                <p>Dommage tout accident responsable ou non responsable.</p>
+            </li>
+            <li>
+                <img src="src/check-circle-svgrepo-com.svg" alt="">
+                <p>Assistance, dépannage ou remorquage selon la franchise souscrite.</p>
+            </li>
+        </ul>
+         <div class="title col-blue">RC PRO taxi </div>
+        <ul>
+            <li>
+                <img src="src/check-circle-svgrepo-com.svg" alt="">
+                <p>Extérieur du véhicule utilisé pour l’exercice de l’activité par exemple au cas où la valise d’un client est détériorée à l’occasion de son déchargement ;</p>
+            </li>
+            <li>
+                <img src="src/check-circle-svgrepo-com.svg" alt="">
+                <p>Une perte d’exploitation en cas d’immobilisation du véhicule donc une incapacité à exercer son activité ;</p>
+            </li>
+            <li>
+                <img src="src/check-circle-svgrepo-com.svg" alt="">
+                <p>La réparation du préjudice matériel dans un contexte pénal, à savoir en cas de vol ou d’agression, et on peut alors envisager le remboursement de la recette soustraite ;</p>
+            </li>
+            <li>
+                <img src="src/check-circle-svgrepo-com.svg" alt="">
+                <p>Le remboursement d'un stage de récupération de points.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="txt">
+        <h1>Devis assurances taxi</h1>
+        <p>Pour obtenir un devis d’assurance taxi, il vous suffit de compléter le formulaire en haut de page, c’est simple et rapide. Cela vous permettra d’effectuer en ligne un comparatif de différentes compagnies d’assurance proposant des garanties sur mesure pour les chauffeurs taxi. </p>
+    </div>
+    <div class="footer">
+        <div class="left">
+                Copyright © 2023 Tous droits réservés | <a href="#">Mentions légales</a>
+        </div>
+        <div class="rightFot">
+            Entreprise soumise au contrôle de ..
+        </div>
+    </div>
+    <script>
+
+function validateForm(event) {
+
+
+    const inputs = document.getElementsByTagName("input");
+    const selects = document.getElementsByTagName("select");
+    const check = document.getElementById('check');
+    const errorCont = document.querySelector('#lastInd')
+    let isValid = true;
+
+    // Vérification des champs input
+    for (let i = 0; i < inputs.length - 1; i++) {
+        if (inputs[i].value.trim() === "") {
+            inputs[i].classList.add("error");
+            isValid = false;
+        } else {
+            inputs[i].classList.remove("error");
+        }
+    }
+
+    // Vérification des champs select
+    for (let i = 0; i < selects.length; i++) {
+        if (selects[i].value === "") {
+            selects[i].classList.add("error");
+            isValid = false;
+        } else {
+            selects[i].classList.remove("error");
+        }
+    }
+    if (!isValid) {
+        errorCont.textContent = "Veuillez remplir tous les champs, s'il vous plaît.";
+        event.preventDefault();
+        return false; 
+    } else {
+            errorCont.textContent = '';
+    }
+    return isValid;
+}
+
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
